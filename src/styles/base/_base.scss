@@ -1,0 +1,13 @@
+$primaryColor: #43658F;
+$secondaryColor: #00659B;
+$tertiaryColor: #39fcfc;
+
+@mixin button-flag {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    border: none;
+    cursor: pointer;
+    border: solid 2px $tertiaryColor;
+
+}
