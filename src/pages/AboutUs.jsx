@@ -1,7 +1,7 @@
-const Index = ({ language }) => {
+const AboutUs = ({ language }) => {
 
     return (
-        <div className="index">
+        <>
             {language === 'en' ? (
                 <>
                     <h1>first color</h1>
@@ -15,11 +15,9 @@ const Index = ({ language }) => {
 
                 </>
             )}
-            <h2>second color</h2>
-            <h3>third color</h3>
 
-        </div>
+        </>
     )
 }
 
-export default Index
+export default AboutUs
