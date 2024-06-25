@@ -4,7 +4,6 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 99;
     color: white;
     align-items: center;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
@@ -32,7 +31,6 @@
             background-image: url('https://i.imgur.com/HsvhOBt.png');
             @include button-flag;
         }
-
     }
 
     button:hover {
@@ -50,9 +48,7 @@
         justify-content: space-between;
         margin: 0 2%;
 
-
         .nav-container {
-
             display: flex;
             align-items: center;
             justify-content: center;
@@ -65,16 +61,18 @@
                 cursor: pointer;
                 font-size: 1.5rem;
                 margin-right: 1rem;
+                transition: color 0.3s ease;
+
+                &:active {
+                    color: $tertiaryColor;
+                }
             }
 
             .nav-links {
-
-                &.show {
-                    display: block;
-                    width: 100vw;
-                    right: 0;
-
-                }
+                display: flex;
+                transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+                transform: translateX(0);
+                opacity: 1;
 
                 li {
                     font-size: 1.25rem;
@@ -89,7 +87,6 @@
                     }
 
                     &:hover {
-
                         a {
                             color: $tertiaryColor;
                             position: relative;
@@ -112,24 +109,32 @@
                         }
                     }
                 }
-            }
 
+                .close-icon {
+                    display: none;
+                }
+            }
         }
     }
+}
 
-
-    @media only screen and (max-width: 847px) {
+@media only screen and (max-width: 847px) {
+    .navigation {
 
         button {
             width: 40px;
             height: 40px;
         }
 
+        .logo {
+            width: 180px;
+            height: 75px;
+        }
+
         nav {
 
             .nav-container {
-
-                margin: 0px;
+                margin: 0;
                 justify-content: end;
 
                 .menu-icon {
@@ -137,24 +142,54 @@
                 }
 
                 .nav-links {
-                    display: none;
-                    position: absolute;
-                    top: 2rem;
-                    padding: 2.5rem 0rem 0rem 4rem;
-                    text-align: center;
-                    transition: display 0.3s ease;
+                    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+                    z-index: -100;
+                    display: flex;
+                    transform: translateX(-100%);
+                    position: fixed;
+                    top: -15px;
+                    left: 0;
+                    width: 100vw;
+                    height: 30vh;
+                    background: linear-gradient(90deg, $primaryColor, $secondaryColor);
+                    text-align: left;
+                    padding: 1rem;
+                    transition: transform 0.3s ease, opacity 0.3s ease;
+                    opacity: 0;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    padding-top: 6rem;
 
-                    li {
 
-
-
-                        a {
-                            font-size: 1rem;
-                        }
-
-
+                    &.show {
+                        transform: translateX(0);
+                        opacity: 1;
                     }
 
+                    li {
+                        padding: 1rem;
+                        width: 100%;
+
+                        a {
+                            font-size: 1.5rem;
+                            color: white;
+                            text-decoration: none;
+
+                            &:hover {
+                                color: $tertiaryColor;
+                            }
+                        }
+                    }
+                }
+
+                .close-icon {
+                    display: block;
+                    position: absolute;
+                    top: 1rem;
+                    right: 1rem;
+                    cursor: pointer;
+                    font-size: 1.5rem;
+                    color: white;
                 }
             }
         }
