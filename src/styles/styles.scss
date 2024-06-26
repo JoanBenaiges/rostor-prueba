@@ -1,5 +1,19 @@
 @import './base/base';
 
-@import './pages/Index';
 
-@import './components/Navigation'
+//PAGES
+@import './pages/Index';
+@import './pages/AboutUs';
+@import './pages/Contact';
+@import './pages/OurProducts';
+@import './pages/LegalNotice';
+
+
+//NAVBAR & FOOTER COMPONENT
+@import './components/Navigation';
+@import './components/Footer';
+
+
+
+//INDEX COMPONENTS
+@import './components/indexComponents/FeaturedProducts';

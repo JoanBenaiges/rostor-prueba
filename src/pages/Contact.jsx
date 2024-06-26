@@ -4,13 +4,12 @@ const Contact = ({ language }) => {
         <>
             {language === 'en' ? (
                 <>
-                    <h2>first color</h2>
-
+                    <p>"Contact" under construction...</p>
 
                 </>
             ) : (
                 <>
-                    <h2>primer color</h2>
+                    <p>"Contacto" en construcción...</p>
 
 
                 </>

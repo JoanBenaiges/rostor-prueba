@@ -4,18 +4,32 @@ const OurProducts = ({ language }) => {
         <div>
             {language === 'en' ? (
                 <>
-                    <h3>first color</h3>
+                    <p className="textoproductos">"Our products" under construction</p>
 
 
                 </>
             ) : (
                 <>
-                    <h3>third color</h3>
+                    <p className="textoproductos">"Nuestros productos" en construcción</p>
 
                 </>
             )}
 
+            {language === 'en' ? (
+                <>
+                    <h1 className="firstColor">first color</h1>
 
+
+                </>
+            ) : (
+                <>
+                    <h1 className="firstColor">primer color</h1>
+
+
+                </>
+            )}
+            <h2 className="secondColor">second color</h2>
+            <h3 className="thirdColor"> third color</h3>
         </div>
     )
 }

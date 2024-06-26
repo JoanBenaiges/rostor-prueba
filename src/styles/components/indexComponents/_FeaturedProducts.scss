@@ -1,0 +1,70 @@
+.leftColumn {
+    margin-left: 5vw;
+    width: 22vw;
+    height: 80%;
+    border-right: 1px solid #4b4a4a59;
+    padding-bottom: 50px;
+
+    .titleFeaturedProducts {
+        color: $secondaryColor;
+    }
+
+    h4 {
+        border-bottom: 1px solid #4b4a4a59;
+        padding-bottom: 5px;
+    }
+
+    .pumpFeaturedImage,
+    .equipmentsFeaturedImage {
+        height: 11vw;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .pumpFeaturedImage {
+        background-image: url('https://i.imgur.com/wcAa0w7.jpeg');
+        width: 15vw;
+    }
+
+    .equipmentsFeatured {
+        margin-top: 3rem;
+    }
+
+    .equipmentsFeaturedImage {
+        background-image: url('https://i.imgur.com/DKjS62I.jpeg');
+        width: 18vw;
+    }
+
+    .productFeaturedText {
+        margin-top: 5px;
+    }
+
+    .buttonContainer {
+
+        .buttonFeaturedProduct {
+            display: inline-block;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 50px;
+            background-color: $primaryColor;
+            color: white;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+        }
+
+        .buttonFeaturedProduct:hover {
+            background-color: $secondaryColor;
+        }
+
+        .buttonFeaturedProduct:active {
+            background-color: $tertiaryColor;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transform: scale(0.98);
+        }
+    }
+}

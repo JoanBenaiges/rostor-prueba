@@ -118,7 +118,7 @@
     }
 }
 
-@media only screen and (max-width: 847px) {
+@media only screen and (max-width: 1050px) {
     .navigation {
 
         button {
@@ -150,7 +150,7 @@
                     top: -15px;
                     left: 0;
                     width: 100vw;
-                    height: 30vh;
+                    height: 16rem;
                     background: linear-gradient(90deg, $primaryColor, $secondaryColor);
                     text-align: left;
                     padding: 1rem;

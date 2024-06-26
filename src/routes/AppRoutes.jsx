@@ -2,6 +2,7 @@ import AboutUs from "../pages/AboutUs";
 import Contact from "../pages/Contact";
 import Index from "../pages/Index";
 import OurProducts from "../pages/OurProducts"
+import LegalNotice from "../pages/LegalNotice"
 import { Routes, Route } from "react-router-dom";
 
 const AppRoutes = ({ language, toggleLanguage }) => {
@@ -25,6 +26,11 @@ const AppRoutes = ({ language, toggleLanguage }) => {
             <Route
                 path={'/our-products'}
                 element={<OurProducts language={language} toggleLanguage={toggleLanguage} />}
+            />
+
+            <Route
+                path={'/legal-notice'}
+                element={<LegalNotice language={language} toggleLanguage={toggleLanguage} />}
             />
 
         </Routes>

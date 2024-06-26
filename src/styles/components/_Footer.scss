@@ -1,0 +1,58 @@
+.footer {
+    align-items: center;
+    justify-content: space-between;
+    display: flex;
+    background-color: $primaryColor;
+    left: 0;
+    text-align: center;
+    width: 100%;
+    font-size: 0.8rem;
+    color: white;
+    position: absolute;
+
+    .copyrightContainer {
+        margin-left: 2rem;
+    }
+
+    .addressContainer {
+        text-align: center;
+        flex: 1;
+
+        p {
+            margin: 0;
+        }
+    }
+
+    .avisoLegal {
+        margin-right: 2rem;
+        cursor: pointer;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: $tertiaryColor;
+        }
+    }
+}
+
+@media only screen and (max-width: 1050px) {
+
+    .footer {
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+
+        .addressContainer {
+            margin: 0rem 2rem;
+        }
+
+        .copyrightContainer {
+            margin-left: 0rem;
+        }
+
+        .avisoLegal {
+            margin-right: 0rem;
+        }
+    }
+
+}
